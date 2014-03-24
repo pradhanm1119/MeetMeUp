@@ -21,11 +21,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetupID" textLabel="8l6-Kj-wVk" detailTextLabel="TaM-TF-pdq" style="IBUITableViewCellStyleSubtitle" id="04W-lG-lQ3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MeetupID" textLabel="8l6-Kj-wVk" detailTextLabel="TaM-TF-pdq" style="IBUITableViewCellStyleSubtitle" id="04W-lG-lQ3">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="04W-lG-lQ3" id="nGz-oF-K7E">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8l6-Kj-wVk">
@@ -44,6 +44,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mSE-99-w6h" kind="push" id="Es1-fr-Nn0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -62,6 +65,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="76"/>
+        </scene>
+        <!--Meet Up Event View Controller-->
+        <scene sceneID="OVr-np-kQM">
+            <objects>
+                <viewController id="mSE-99-w6h" customClass="MPRMeetUpEventViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U6H-qb-zF0"/>
+                        <viewControllerLayoutGuide type="bottom" id="iFh-UB-BOM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tak-eq-9tx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uJo-61-QKm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6H-mA-HV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wKy-8g-UcA">
