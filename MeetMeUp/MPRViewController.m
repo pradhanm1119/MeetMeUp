@@ -87,7 +87,7 @@
     //NSURL           *url = [NSURL URLWithString:superhero[@"avatar_url"]];
     
     cell.textLabel.text       = meetUp[@"name"];
-    NSLog(@"Venue: %@", meetUp[@"venue"]);
+    cell.detailTextLabel.text = [meetUp[@"venue"] objectForKey:@"address_1"];
     //cell.detailTextLabel.text = meetUp[@"venue", @"address"];
     //cell.imageView.image      = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
     return cell;
