@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MPRMeetUpEvent.h"
 
 @interface MPRMeetUpEventViewController : UIViewController
-@property MPRMeetUpEvent *event;
+@property NSString *meetUpGroupName;
+@property NSString *meetUpEventName;
+@property NSString *meetUpEventVenueName;
+@property NSString *meetUpEventVenueAddress;
+@property NSString *meetUpEventDescription;
+@property NSString *meetUpEventURL;
+@property NSString *yesRSVP;
+@property NSString *maybeRSVP;
+@property NSString *waitlistRSVP;
 @end

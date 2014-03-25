@@ -22,7 +22,6 @@
 		261DD54F18E0B3F9008407E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 261DD54D18E0B3F9008407E3 /* InfoPlist.strings */; };
 		261DD55118E0B3F9008407E3 /* MeetMeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DD55018E0B3F9008407E3 /* MeetMeUpTests.m */; };
 		261DD55C18E0CC95008407E3 /* MPRMeetUpEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DD55B18E0CC95008407E3 /* MPRMeetUpEventViewController.m */; };
-		261DD55F18E0CED1008407E3 /* MPRMeetUpEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DD55E18E0CED1008407E3 /* MPRMeetUpEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +56,6 @@
 		261DD55018E0B3F9008407E3 /* MeetMeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetMeUpTests.m; sourceTree = "<group>"; };
 		261DD55A18E0CC95008407E3 /* MPRMeetUpEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRMeetUpEventViewController.h; sourceTree = "<group>"; };
 		261DD55B18E0CC95008407E3 /* MPRMeetUpEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRMeetUpEventViewController.m; sourceTree = "<group>"; };
-		261DD55D18E0CED1008407E3 /* MPRMeetUpEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRMeetUpEvent.h; sourceTree = "<group>"; };
-		261DD55E18E0CED1008407E3 /* MPRMeetUpEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRMeetUpEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +118,6 @@
 				261DD53418E0B3F9008407E3 /* MPRAppDelegate.h */,
 				261DD53518E0B3F9008407E3 /* MPRAppDelegate.m */,
 				261DD53718E0B3F9008407E3 /* Main.storyboard */,
-				261DD55D18E0CED1008407E3 /* MPRMeetUpEvent.h */,
-				261DD55E18E0CED1008407E3 /* MPRMeetUpEvent.m */,
 				261DD53A18E0B3F9008407E3 /* MPRViewController.h */,
 				261DD53B18E0B3F9008407E3 /* MPRViewController.m */,
 				261DD55A18E0CC95008407E3 /* MPRMeetUpEventViewController.h */,
@@ -263,7 +258,6 @@
 				261DD53618E0B3F9008407E3 /* MPRAppDelegate.m in Sources */,
 				261DD55C18E0CC95008407E3 /* MPRMeetUpEventViewController.m in Sources */,
 				261DD53C18E0B3F9008407E3 /* MPRViewController.m in Sources */,
-				261DD55F18E0CED1008407E3 /* MPRMeetUpEvent.m in Sources */,
 				261DD53218E0B3F9008407E3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

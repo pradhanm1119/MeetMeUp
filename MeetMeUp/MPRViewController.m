@@ -7,14 +7,11 @@
 //
 
 #import "MPRViewController.h"
-#import "MPRMeetUpEvent.h"
-#import "MPRMeetUpEventViewController.h"
 
 @interface MPRViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView             *myTableView;
     NSArray                          *allMeetUpEvents;
-    MPRMeetUpEvent                   *event;
     NSMutableArray                   *events;
 }
 @end
@@ -41,30 +38,12 @@
     // Stores mutable dictionary of MeetUp events into an array
 
     allMeetUpEvents                  = allMeetUps[@"results"];
+    [myTableView reloadData];
     
     
     // Call to the super class to load the view
     
     [super viewDidLoad];
-    
-    
-    // Store information from MeetUp JSON file into MeetUpEvent object
-    
-    event.meetUpGroupName            = [[allMeetUps objectForKey:@"group"] objectForKey:@"name"];
-    event.meetUpEventName            = [allMeetUps objectForKey:@"name"];
-    event.meetUpEventVenueName       = [[allMeetUps objectForKey:@"venue"] objectForKey:@"name"];
-    event.meetUpEventVenueAddress    = [[allMeetUps objectForKey:@"venue"] objectForKey:@"address_1"];
-    event.meetUpEventDescription     = [allMeetUps objectForKey:@"description"];
-    event.meetUpEventURL             = [allMeetUps objectForKey:@"event_url"];
-    event.yesRSVP                    = [allMeetUps objectForKey:@"yes_rsvp_count"];
-    event.maybeRSVP                  = [allMeetUps objectForKey:@"maybe_rsvp_count"];
-    event.waitlistRSVP               = [allMeetUps objectForKey:@"waitlist_count"];
-    
-    
-    // Store MeetUpEvent objects into a mutable array
-    
-    events                           = [[NSMutableArray alloc]initWithObjects:event, nil];
-    [events addObject:event];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -92,10 +71,21 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender
 {
-    NSIndexPath *indexPath           = [myTableView indexPathForCell:sender];
-    MPRMeetUpEvent *meetUpEvent      = [events objectAtIndex:indexPath.row];
-    MPRMeetUpEventViewController *vc = segue.destinationViewController;
-    vc.event                         = meetUpEvent;
+    // Prepares MeetUpEvent object for segue to the MeetUpEvent View Controller
+    
+    NSIndexPath *indexPath              = [myTableView indexPathForCell:sender];
+    MPRMeetUpEventViewController *vc    = segue.destinationViewController;
+    
+    vc.navigationItem.title       = [allMeetUpEvents[indexPath.row]objectForKey:@"name"];
+    vc.meetUpGroupName            = [[allMeetUpEvents[indexPath.row]objectForKey:@"group"]objectForKey:@"name"];
+    vc.meetUpEventName            = [allMeetUpEvents[indexPath.row] objectForKey:@"name"];
+    vc.meetUpEventVenueName       = [[allMeetUpEvents[indexPath.row] objectForKey:@"venue"] objectForKey:@"name"];
+    vc.meetUpEventVenueAddress    = [[allMeetUpEvents[indexPath.row] objectForKey:@"venue"] objectForKey:@"address_1"];
+    vc.meetUpEventDescription     = [allMeetUpEvents[indexPath.row] objectForKey:@"description"];
+    vc.meetUpEventURL             = [allMeetUpEvents[indexPath.row] objectForKey:@"event_url"];
+    vc.yesRSVP                    = [allMeetUpEvents[indexPath.row] objectForKey:@"yes_rsvp_count"];
+    vc.maybeRSVP                  = [allMeetUpEvents[indexPath.row] objectForKey:@"maybe_rsvp_count"];
+    vc.waitlistRSVP               = [allMeetUpEvents[indexPath.row] objectForKey:@"waitlist_count"];
 }
 
 @end

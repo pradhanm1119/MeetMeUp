@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MPRMeetUpEventViewController.h"
 
 @interface MPRViewController : UIViewController
 

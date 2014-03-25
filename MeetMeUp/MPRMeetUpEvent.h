@@ -15,7 +15,7 @@
 @property NSString *meetUpEventVenueAddress;
 @property NSString *meetUpEventDescription;
 @property NSString *meetUpEventURL;
-@property NSNumber *yesRSVP;
-@property NSNumber *maybeRSVP;
-@property NSNumber *waitlistRSVP;
+@property NSString *yesRSVP;
+@property NSString *maybeRSVP;
+@property NSString *waitlistRSVP;
 @end
